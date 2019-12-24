@@ -1,0 +1,12 @@
+@import './base/breakpoint';
+@import './base/fonts';
+@import './base/aligment';
+@import './base/colors';
+@import './base/general';
+
+//components
+@import './components/Header/header';
+@import './components/Card/card';
+
+//Pages
+@import './pages/Homepage/home-page';

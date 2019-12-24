@@ -1,0 +1,42 @@
+
+.container {
+    margin: 0 auto;
+    @media screen and (max-width: 550px){
+        padding: 0 20px;
+    }
+    @media screen and (min-width: map-get($breakpoints, xs)){
+        max-width: 540px;
+    }
+    @media screen and (min-width: map-get($breakpoints, sm)){
+        max-width: 720px;
+    }
+    @media screen and (min-width: map-get($breakpoints, md)){
+        max-width: 960px;
+    }
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        max-width: 1140px;
+    }
+}
+
+.d_flex{
+    display: flex;
+
+    &--center{
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--start{
+        justify-content: flex-start;
+    }
+
+    &--end{
+        justify-content: flex-end;
+    }
+
+    &--column{
+        flex-direction: column;
+    }
+
+
+}

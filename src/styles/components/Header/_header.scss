@@ -1,0 +1,55 @@
+$border-radius-search: 15px;
+
+.header{
+
+    &--title{
+        font-family: $Lobster;
+        font-size: 90px;
+    }
+
+    &--search{
+        width: 100%;
+        input {
+            color: map-get($colors , blackk);
+            padding: 20px 10px;
+            font-size: 20px;
+            width: 70%;
+            border: none;
+            border-top-left-radius: $border-radius-search;
+            border-bottom-left-radius: $border-radius-search;
+
+            @media screen and (max-width: map-get($breakpoints , xs)){
+                width: 100%;
+            }
+        }
+        button{
+            padding: 20px 10px;
+            color: map-get($colors , blackk);
+            height: 64px;
+            min-width: 100px;
+            border: none;
+            border-top-right-radius: $border-radius-search;
+            border-bottom-right-radius: $border-radius-search;
+
+            @media screen and (max-width: map-get($breakpoints , xs)){
+                min-width: 50px;
+            }
+
+            i{
+                color: map-get($colors , blackk);
+            }
+
+            &:active{
+                background-color: #eee;
+            }
+        }
+    }
+
+    &--error{
+        width: 78%;
+        margin-top: 10px;
+        p{
+            margin-left: 10px;
+        }
+    }
+}

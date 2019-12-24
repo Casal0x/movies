@@ -1,0 +1,29 @@
+.homepage{
+    padding-top: 50px;
+
+    &--link{
+        font-family: $Lobster;
+        text-decoration: none;
+        transition: 0.8s;
+
+        &:hover{
+            color: #ff9797;
+        }
+    }
+    &--welcome-text{
+        font-size: 38px;
+        @media screen and (max-width: map-get($breakpoints , xs)){
+            font-size: 24px;
+        }
+    }
+    &--page-name{
+        font-weight: bold;
+        font-family: $Lobster;
+    }
+    &--error{
+        font-size: 30px;
+        @media screen and (max-width: map-get($breakpoints , xs)){
+            font-size: 24px;
+        }
+    }
+}
