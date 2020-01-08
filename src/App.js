@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage/HomePage';
 import MovieDetailPage from './pages/MovieDetailPage/MovieDetailPage';
 import MoviesListPage from './pages/MoviesListPage/MoviesListPage';
 import Axios from 'axios';
+import Loader from './components/Loader/Loader';
 
 
 export default function App() {
@@ -50,7 +51,7 @@ export default function App() {
       <Switch>
         <Route exact path="/">
           <div className="container">
-          { loading ? "Loading..." : movies.length <= 0 
+          { loading ? <Loader /> : movies.length <= 0 
           ? <HomePage error={error} /> 
           : <MoviesListPage
               movies={movies}

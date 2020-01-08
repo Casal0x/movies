@@ -29,6 +29,11 @@
         align-items: center;
         transition: all .5s ease-in-out;
         visibility: hidden;
+        a{
+            font-family: $Lobster;
+            font-size: 36px;
+            text-shadow: 1px 1px 1px black;
+        }
     }
     
     &:hover &{
