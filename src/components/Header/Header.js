@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 
-const Header = ({ handleSearch, setMovies, setErr }) => {
+const Header = ({ handleSearch, setMovies, setErr, setPage, page }) => {
 
     const [searchInput, setSearchInput] = useState('');
     const [error, setError] = useState(false);
     let history = useHistory();
 
     const handleSearchButton = () => {
+        setPage(1);
         if(searchInput !== ''){
-            handleSearch(searchInput)
+            handleSearch(searchInput, page);
             setSearchInput('');
             setError(false);
         }else{
             setError(true);
-        }  
+        } 
+        history.push("/");
     }
 
     const handleChange = (e) =>{

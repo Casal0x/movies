@@ -1,0 +1,18 @@
+$border: 1px solid white;
+
+.paginator{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    &--item{
+        border-top: $border;
+        border-bottom: $border;
+        border-left: $border;
+
+        &:last-child{
+            border-right: $border;
+            border-top-right-radius: 10%;
+        }
+    }
+}

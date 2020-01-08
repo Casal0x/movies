@@ -22,13 +22,14 @@ export default function App() {
   const [error, setError] = useState({error: false, message: ''})
 
 
-  const handleSearch = (searchInput, page = 1) => {
+  const handleSearch = (searchInput, page) => {
     setLoading(true);
     Axios.get(`http://www.omdbapi.com/?s=${searchInput}&apikey=bbcc31ad&page=${page}&type=movie`)
     .then(res => {
-      console.log(res);
       if(res.data.Response !== 'False') {
-        setMovies(res.data.Search);
+        let data = res.data.Search;
+
+        setMovies(data);
         setError({ error: false, message: '' });
         setTotalPages(Number(res.data.totalResults));
       }
@@ -45,7 +46,7 @@ export default function App() {
 
   return (
     <Router>
-      <Header handleSearch={handleSearch} setMovies={setMovies} setErr={setError}/>
+      <Header handleSearch={handleSearch} setMovies={setMovies} setErr={setError} setPage={setPage} page={page} />
       <Switch>
         <Route exact path="/">
           <div className="container">
@@ -57,11 +58,14 @@ export default function App() {
               totalPages={totalPages}
               searchInput={search}
               setPage={setPage}
+              handleSearch={handleSearch}
             />
           }
           </div>
         </Route>
-        <Route path="/:id" component={MovieDetailPage} />
+        <Route path="/movie/:id" > 
+          <MovieDetailPage movies={movies} />
+        </Route>
         <Route component={HomePage} />
       </Switch>
     </Router>

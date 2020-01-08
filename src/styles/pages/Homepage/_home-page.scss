@@ -7,7 +7,7 @@
         transition: 0.8s;
 
         &:hover{
-            color: #ff9797;
+            color: map-get($colors, redlink);
         }
     }
     &--welcome-text{

@@ -26,6 +26,14 @@
         align-items: center;
     }
 
+    &--justify-center{
+        justify-content: center;
+    }
+
+    &--align-center{
+        align-items: center;
+    }
+
     &--start{
         justify-content: flex-start;
     }
@@ -39,4 +47,34 @@
     }
 
 
+}
+
+.m {
+    &t{
+        &-5{
+            margin-top: 5px;
+        }
+
+        &-10{
+            margin-top: 10px;
+        }
+
+        &-20{
+            margin-top: 20px;
+        }
+    }
+    
+    &b{
+        &-5{
+            margin-bottom: 5px;
+        }
+
+        &-10{
+            margin-bottom: 10px;
+        }
+
+        &-20{
+            margin-bottom: 20px;
+        }
+    }
 }

@@ -7,6 +7,9 @@
 //components
 @import './components/Header/header';
 @import './components/Card/card';
+@import './components/Paginator/paginator';
 
 //Pages
 @import './pages/Homepage/home-page';
+@import './pages/MovieListPage/movie-list-page';
+@import './pages/MovieDetailPage/movie-detail-page';
