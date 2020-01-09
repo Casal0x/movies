@@ -18,6 +18,7 @@
     }
 
     &--container{
+
         & * {
             font-family: $Lobster;
         }
@@ -53,6 +54,32 @@
                     span{
                         color: map-get($colors, redlink);
                     }
+                }
+            }
+        }
+
+        @media screen and (max-width: map-get($breakpoints , xs)){
+            flex-direction: column;
+
+            &--poster{
+                width: 100%;
+            }
+
+            &--specs{
+                width: 100%;
+                margin: 0;
+
+                h2{
+                    font-size: 36px;
+                }
+
+                &--plot{
+                    margin-bottom: 20px;
+                    font-size: 26px;
+                }
+
+                ul li {
+                    font-size: 18px;
                 }
             }
         }
