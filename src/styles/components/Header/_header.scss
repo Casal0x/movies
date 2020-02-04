@@ -18,6 +18,8 @@ $border-radius-search: 15px;
             border: none;
             border-top-left-radius: $border-radius-search;
             border-bottom-left-radius: $border-radius-search;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
 
             @media screen and (max-width: map-get($breakpoints , xs)){
                 width: 100%;
@@ -26,6 +28,7 @@ $border-radius-search: 15px;
         button{
             padding: 20px 10px;
             color: map-get($colors , blackk);
+            background-color: #ddd;
             height: 64px;
             min-width: 100px;
             border: none;

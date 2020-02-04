@@ -43,7 +43,7 @@ const Header = ({ handleSearch, setMovies, setErr, setPage, page }) => {
                         handleSearchButton();
                     }
                 }}/>
-                <button onClick={()=> {
+                <button className="submit-btn" onClick={()=> {
                     handleSearchButton();
                 } }>
                     <i className="fad fa-search fa-2x"></i>
